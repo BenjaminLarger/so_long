@@ -6,7 +6,7 @@
 /*   By: blarger <blarger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:05:47 by blarger           #+#    #+#             */
-/*   Updated: 2024/02/09 18:51:34 by blarger          ###   ########.fr       */
+/*   Updated: 2024/02/10 11:12:42 by blarger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	mlx_key_data(mlx_key_data_t keydata, void *param)
 		move_right(game);
 	if (keydata.key == MLX_KEY_ESCAPE && keydata.action == MLX_RELEASE)
 	{
-		free(game->image);
 		mlx_close_window(game->mlx);
 	}
 }
@@ -54,5 +53,5 @@ void	start_game(t_map *map)
 	map->collected_count = 0;
 	if (!create_textures(map))
 		return (free_map(map), free(map), print_error(MALLOC_FAIL));
-	mlx_put_string(map->mlx, "Moves :", map->raw * 3, map->col * 30);
+	mlx_put_string(map->mlx, "Moves :", map->raw * 3, 1);
 }

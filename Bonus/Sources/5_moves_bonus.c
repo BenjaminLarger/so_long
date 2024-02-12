@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: blarger <blarger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 19:02:58 by blarger           #+#    #+#             */
-/*   Updated: 2024/02/09 19:03:01 by blarger          ###   ########.fr       */
+/*   Created: 2024/02/10 10:55:29 by blarger           #+#    #+#             */
+/*   Updated: 2024/02/10 11:12:10 by blarger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	move_count_on_window(t_map *game)
 	char	*str;
 
 	mlx_image_to_window(game->mlx, game->image->wall,
-		game->raw * 10, SIZE * game->col);
+		game->raw * 10, 1);
 	str = ft_itoa(game->moves_cont);
 	mlx_put_string(game->mlx, str,
-		game->raw * 10, game->col * SIZE);
+		game->raw * 10, 1);
 	free(str);
 }
 

@@ -6,7 +6,7 @@
 /*   By: blarger <blarger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 10:55:12 by blarger           #+#    #+#             */
-/*   Updated: 2024/02/08 16:25:20 by blarger          ###   ########.fr       */
+/*   Updated: 2024/02/10 11:45:31 by blarger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	check_for_unknown_char(t_map *get)
 				&& get->map[i][j] != 'P' && get->map[i][j] != 'C'
 				&& get->map[i][j] != 'E')
 			{
-				return (free_map(get), print_error(INVALID_CHAR));
+				return (free_map(get), free(get), print_error(INVALID_CHAR));
 			}
 			j++;
 		}
@@ -47,14 +47,14 @@ void	valid_vertical_wall(t_map *get)
 	while (i < get->raw)
 	{
 		if (get->map[i][0] != '1')
-			return (free(get->map), free(get), print_error(INVALID_WALL));
+			return (free_map(get), free(get), print_error(INVALID_WALL));
 		i++;
 	}
 	i = 0;
 	while (i < get->raw)
 	{
 		if (get->map[i][get->col - 1] != '1')
-			return (free(get->map), free(get), print_error(INVALID_WALL));
+			return (free_map(get), free(get), print_error(INVALID_WALL));
 		i++;
 	}
 }
@@ -67,7 +67,7 @@ void	valid_horizontal_wall(t_map *get)
 	while (i < get->raw)
 	{
 		if (get->map[0][i] != '1')
-			return (free(get->map), print_error(INVALID_WALL));
+			return (free_map(get), free(get), print_error(INVALID_WALL));
 		i++;
 	}
 	i = 0;

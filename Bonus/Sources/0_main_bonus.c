@@ -6,7 +6,7 @@
 /*   By: blarger <blarger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 10:23:47 by blarger           #+#    #+#             */
-/*   Updated: 2024/02/09 18:50:18 by blarger          ###   ########.fr       */
+/*   Updated: 2024/02/10 10:44:17 by blarger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	main(int argc, char **argv)
 	mlx_key_hook(get->mlx, &mlx_key_data, get);
 	mlx_loop(get->mlx);
 	mlx_terminate(get->mlx);
+	free_images(get);
 	free_map(get);
 	free(get);
 }

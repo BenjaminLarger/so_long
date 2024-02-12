@@ -6,7 +6,7 @@
 /*   By: blarger <blarger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 10:48:41 by blarger           #+#    #+#             */
-/*   Updated: 2024/02/09 18:36:18 by blarger          ###   ########.fr       */
+/*   Updated: 2024/02/10 10:47:32 by blarger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,6 @@ void	free_images(t_map *g)
 			mlx_delete_image(g->mlx, g->image->play);
 		if (g->image->wall)
 			mlx_delete_image(g->mlx, g->image->wall);
-		if (g->texture->enm1)
-			mlx_delete_texture(g->texture->enm1);
-		if (g->enmy_count > 1)
-			mlx_delete_texture(g->texture->enm2);
-		if (g->enmy_count > 2)
-			mlx_delete_texture(g->texture->enm3);
 		free(g->image);
 	}
 }

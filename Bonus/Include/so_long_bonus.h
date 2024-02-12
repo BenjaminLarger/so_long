@@ -6,7 +6,7 @@
 /*   By: blarger <blarger@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 09:40:09 by blarger           #+#    #+#             */
-/*   Updated: 2024/02/09 16:52:34 by blarger          ###   ########.fr       */
+/*   Updated: 2024/02/10 12:05:55 by blarger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,9 @@ void	move_right(t_map *game);
 void	mlx_key_data(mlx_key_data_t keydata, void *param);
 
 //5_valid_enemy_move_bonus.c
-int	valid_enemy1_move(t_map *game, int x_p, int y_p);
-int	valid_enemy2_move(t_map *game, int x_p, int y_p);
-int	valid_enemy3_move(t_map *game, int x_p, int y_p);
+int		valid_enemy1_move(t_map *game, int x_p, int y_p);
+int		valid_enemy2_move(t_map *game, int x_p, int y_p);
+int		valid_enemy3_move(t_map *game, int x_p, int y_p);
 
 //5_move_enemy_bonus.c
 void	move_enemy_x(t_map *game);
