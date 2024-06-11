@@ -21,4 +21,5 @@ To get started with `so_long`, clone the repository and compile the program usin
 ```bash
 git clone https://github.com/BenjaminLarger/so_long.git
 cd so_long
-make
+make bonus
+./so_long_bonus
